@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.web.WebView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+
+<HBox fx:id="box" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.launcher.login.LoginController">
+    <children>
+        <BorderPane HBox.hgrow="ALWAYS">
+            <left>
+                <VBox alignment="CENTER_LEFT">
+                    <children>
+                        <ProgressBar fx:id="bar">
+                            <VBox.margin>
+                                <Insets left="5.0" bottom="5.0" />
+                            </VBox.margin>
+                        </ProgressBar>
+                        <Label fx:id="barLabel" text="Ready To Login">
+                            <VBox.margin>
+                                <Insets left="5.0"/>
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </left>
+            <right>
+                <HBox>
+                    <children>
+                        <VBox>
+                            <children>
+                                <TextField fx:id="user" promptText="Username or Email">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" right="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <PasswordField fx:id="pass" promptText="Password">
+                                    <VBox.margin>
+                                        <Insets right="5.0" />
+                                    </VBox.margin>
+                                </PasswordField>
+                            </children>
+                        </VBox>
+                        <VBox>
+                            <children>
+                                <Button fx:id="login" text="Login" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+            </right>
+        </BorderPane>
+    </children>
+</HBox>
